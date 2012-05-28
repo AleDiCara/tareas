@@ -1,0 +1,4 @@
+class Tarea < ActiveRecord::Base
+  attr_accessible :completo, :descripcion, :fecha, :titulo
+validates :titulo, :descripcion, presence: true
+end

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  titulo: MyString
+  descripcion: MyText
+  fecha: 2012-04-24 04:10:20
+  completo: false
+
+two:
+  titulo: MyString
+  descripcion: MyText
+  fecha: 2012-04-24 04:10:20
+  completo: false

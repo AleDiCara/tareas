@@ -1,0 +1,32 @@
+<div class='Titulo'> 
+<h1>Listado de tareas</h1>
+</div>
+<br /><br />
+
+<table>
+  <tr>
+    <th>Titulo</th>
+    <th>Descripcion</th>
+    <th>Fecha</th>
+    <th>Completo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tareas.each do |tarea| %>
+  <tr>
+    <td><%= tarea.titulo %></td>
+    <td><%= tarea.descripcion %></td>
+    <td><%= l tarea.fecha, format: :ale %></td>
+    <td><%= tarea.completo ? 'si' : 'no' %></td>
+    <td><%= link_to 'Mostrar', tarea %></td>
+    <td><%= link_to 'Editar', edit_tarea_path(tarea) %></td>
+    <td><%= link_to 'Borrar', tarea, confirm: '¿Estás seguro?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nueva tarea', new_tarea_path %>
